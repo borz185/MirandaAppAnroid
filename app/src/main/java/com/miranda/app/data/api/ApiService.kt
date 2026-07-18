@@ -20,4 +20,15 @@ interface ApiService {
 
     @PATCH("api/tariffs/select/{id}")
     suspend fun selectTariff(@Path("id") tariffId: Int): Response<ApiResponse<TariffSelectionResponse>>
+
+    // Добавьте в интерфейс ApiService:
+
+    @GET("api/services")
+    suspend fun getServices(): Response<ApiResponse<List<ServiceData>>>
+
+    @PATCH("api/services/toggle/{id}")
+    suspend fun toggleService(
+        @Path("id") serviceId: Int,
+        @Body body: ToggleServiceRequest
+    ): Response<ApiResponse<ServiceToggleResponse>>
 }

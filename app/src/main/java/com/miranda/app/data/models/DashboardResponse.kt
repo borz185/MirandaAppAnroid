@@ -24,13 +24,7 @@ data class TariffData(
     val next_billing_date: String
 )
 
-data class ServiceData(
-    val id: Int,
-    val name: String,
-    val monthly_fee: Double,
-    val next_billing_date: String,
-    val is_bonus: Boolean
-)
+
 
 data class PromotionData(
     val id: Int,
