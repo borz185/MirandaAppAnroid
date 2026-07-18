@@ -10,6 +10,7 @@ data class DashboardResponse(
 data class UserData(
     val id: Int,
     val full_name: String,
+    val email: String,
     val account_number: String,
     val balance: Double,
     val bonus_points: Int
@@ -26,12 +27,7 @@ data class TariffData(
 
 
 
-data class PromotionData(
-    val id: Int,
-    val title: String,
-    val description: String,
-    val image_url: String
-)
+
 
 data class TariffSelectionResponse(
     val id: Int,

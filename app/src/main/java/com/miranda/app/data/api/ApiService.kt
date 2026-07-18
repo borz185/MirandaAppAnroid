@@ -39,4 +39,15 @@ interface ApiService {
 
     @POST("api/payment/topup")
     suspend fun topUpBalance(@Body request: TopUpRequest): Response<ApiResponse<TopUpResponse>>
+
+    // Профиль пользователя
+    @GET("api/user/profile")
+    suspend fun getProfile(): Response<ApiResponse<UserData>>
+
+    // Выход из системы
+    @POST("api/auth/logout")
+    suspend fun logout(): Response<ApiResponse<Any>>
+
+    @GET("api/promotions")
+    suspend fun getPromotions(): Response<ApiResponse<List<PromotionData>>>
 }
