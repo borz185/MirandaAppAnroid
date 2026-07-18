@@ -31,4 +31,12 @@ interface ApiService {
         @Path("id") serviceId: Int,
         @Body body: ToggleServiceRequest
     ): Response<ApiResponse<ServiceToggleResponse>>
+
+    // Добавьте в интерфейс ApiService:
+
+    @GET("api/payment/history")
+    suspend fun getPayments(): Response<ApiResponse<List<PaymentData>>>
+
+    @POST("api/payment/topup")
+    suspend fun topUpBalance(@Body request: TopUpRequest): Response<ApiResponse<TopUpResponse>>
 }
