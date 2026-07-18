@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Фирменные цвета Миранда-медиа -->
+    <color name="primary">#FF6600</color>
+    <color name="primary_dark">#E65C00</color>
+    <color name="primary_light">#FF8533</color>
+    <color name="secondary">#7B2FBE</color>
+    <color name="secondary_light">#9B4FDE</color>
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#F5F5F5</color>
+    <color name="surface_variant">#EEEEEE</color>
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_hint">#999999</color>
+    <color name="success">#4CAF50</color>
+    <color name="success_light">#E8F5E9</color>
+    <color name="error">#F44336</color>
+    <color name="error_light">#FFEBEE</color>
+    <color name="warning">#FFC107</color>
+    <color name="warning_light">#FFF8E1</color>
+    <color name="balance_positive">#4CAF50</color>
+    <color name="balance_negative">#F44336</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="bottom_nav_background">#FFFFFF</color>
+    <color name="bottom_nav_selected">#FF6600</color>
+    <color name="bottom_nav_unselected">#999999</color>
+</resources>
