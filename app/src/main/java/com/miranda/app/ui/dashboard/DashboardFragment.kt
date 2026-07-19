@@ -39,6 +39,8 @@ class DashboardFragment : Fragment() {
     private lateinit var promotionsAdapter: PromotionsAdapter
     private var promotionsList = mutableListOf<PromotionData>()
 
+    private lateinit var btnTopUp: com.google.android.material.button.MaterialButton
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -65,6 +67,19 @@ class DashboardFragment : Fragment() {
         noTariffText = view.findViewById(R.id.no_tariff_text)
         promotionsViewPager = view.findViewById(R.id.promotions_viewpager)
         promotionsIndicator = view.findViewById(R.id.promotions_indicator)
+
+        // Инициализация кнопки пополнения
+        btnTopUp = view.findViewById(R.id.btn_top_up)
+
+        // Обработчик клика
+        btnTopUp.setOnClickListener {
+            // Переход на экран пополнения
+            val topUpFragment = com.miranda.app.ui.topup.TopUpFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(android.R.id.content, topUpFragment)
+                .addToBackStack(null)
+                .commit()
+        }
 
         // Скрываем карусель до успешной загрузки данных
         promotionsViewPager.visibility = View.GONE

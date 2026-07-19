@@ -29,6 +29,10 @@
         <activity android:name=".ui.auth.LoginActivity" />
         <activity android:name=".ui.auth.RegisterActivity" />
         <activity android:name=".ui.main.MainActivity" />
+        <activity
+            android:name=".ui.topup.TopUpSuccessActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
 
     </application>
 

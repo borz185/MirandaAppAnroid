@@ -113,6 +113,17 @@
 
             </com.google.android.material.card.MaterialCardView>
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_top_up"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:text="Пополнить баланс"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp"
+                app:backgroundTint="@color/success" />
+
             <!-- Карточка бонусов -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
