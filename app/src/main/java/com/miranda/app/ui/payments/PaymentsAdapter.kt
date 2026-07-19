@@ -53,18 +53,8 @@ class PaymentsAdapter(
         holder.amountText.setTextColor(amountColor)
 
         // Форматируем дату из ISO 8601 в читаемый вид
-        try {
-            val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
-            val outputFormat = SimpleDateFormat("dd.MM.yyyy HH:mm", Locale.getDefault())
-            val date = inputFormat.parse(payment.created_at)
-            holder.dateText.text = if (date != null) {
-                outputFormat.format(date)
-            } else {
-                payment.created_at
-            }
-        } catch (e: Exception) {
-            holder.dateText.text = payment.created_at
-        }
+        // Форматируем дату в российский стиль
+        holder.dateText.text = com.miranda.app.utils.DateUtils.formatDateWithTime(payment.created_at)
 
         // Статус (безопасная обработка null, так как в JSON его может не быть)
         val status = payment.status ?: "completed"

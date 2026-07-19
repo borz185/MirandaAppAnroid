@@ -115,7 +115,7 @@ class DashboardFragment : Fragment() {
             tariffNameText.text = data.current_tariff.name
             tariffSpeedText.text = "${data.current_tariff.speed} Мбит/с"
             tariffPriceText.text = "${String.format("%.0f", data.current_tariff.price)} ₽/мес"
-            nextBillingText.text = "Следующее списание: ${data.current_tariff.next_billing_date}"
+            nextBillingText.text = "Следующее списание: ${com.miranda.app.utils.DateUtils.formatDateLong(data.current_tariff.next_billing_date)}"
         } else {
             tariffCard.visibility = View.GONE
             noTariffText.visibility = View.VISIBLE
