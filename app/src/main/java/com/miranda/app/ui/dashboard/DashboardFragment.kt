@@ -104,13 +104,8 @@ class DashboardFragment : Fragment() {
         val firstName = data.user.full_name.split(" ").firstOrNull() ?: "Пользователь"
         welcomeText.text = "Здравствуйте, $firstName!"
 
-        val balanceColor = if (data.user.balance >= 0) {
-            requireContext().getColor(R.color.balance_positive)
-        } else {
-            requireContext().getColor(R.color.balance_negative)
-        }
         balanceText.text = "${String.format("%.2f", data.user.balance)} ₽"
-        balanceText.setTextColor(balanceColor)
+        balanceText.setTextColor(requireContext().getColor(android.R.color.white))
         bonusText.text = "${data.user.bonus_points} баллов"
         accountNumberText.text = "Лицевой счёт: ${data.user.account_number}"
 

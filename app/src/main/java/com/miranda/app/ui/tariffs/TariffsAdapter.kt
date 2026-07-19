@@ -51,7 +51,7 @@ class TariffsAdapter(
                 ContextCompat.getColor(holder.itemView.context, R.color.success_light)
             )
         } else {
-            holder.connectButton.text = "Подключить"
+            holder.connectButton.text = "Сменить тариф"
             holder.connectButton.isEnabled = true
             holder.currentBadge.visibility = View.GONE
             holder.cardView.setCardBackgroundColor(

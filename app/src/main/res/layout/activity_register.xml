@@ -1,154 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="@color/background">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
         android:orientation="vertical"
+        android:gravity="center"
         android:padding="24dp">
 
+        <!-- Логотип -->
+        <ImageView
+            android:id="@+id/register_logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/ic_launcher_logo"
+            android:contentDescription="Miranda Logo"
+            android:scaleType="fitCenter" />
+
+        <!-- Заголовок -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Регистрация"
+            android:text="Создание аккаунта"
             android:textColor="@color/text_primary"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Создайте аккаунт в Миранда"
+            android:text="Заполните данные для регистрации"
             android:textColor="@color/text_secondary"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:layout_marginBottom="32dp" />
 
-        <!-- Full Name -->
+        <!-- Поле Имя -->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/fullNameLayout"
+            android:id="@+id/name_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
             android:hint="ФИО"
+            app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
             app:boxStrokeColor="@color/primary"
-            app:startIconDrawable="@android:drawable/ic_menu_myplaces">
+            app:hintTextColor="@color/primary">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fullNameInput"
+                android:id="@+id/name_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="@color/text_primary" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Email -->
+        <!-- Поле Email -->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/emailLayout"
+            android:id="@+id/email_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
             android:hint="Email"
+            app:startIconDrawable="@android:drawable/ic_dialog_email"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
             app:boxStrokeColor="@color/primary"
-            app:startIconDrawable="@android:drawable/ic_dialog_email">
+            app:hintTextColor="@color/primary">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/emailInput"
+                android:id="@+id/email_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:textColor="@color/text_primary" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Password -->
+        <!-- Поле Пароль -->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/passwordLayout"
+            android:id="@+id/password_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
             android:hint="Пароль"
-            app:boxStrokeColor="@color/primary"
+            app:startIconDrawable="@android:drawable/ic_lock_lock"
             app:endIconMode="password_toggle"
-            app:startIconDrawable="@android:drawable/ic_lock_idle_lock">
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxStrokeColor="@color/primary"
+            app:hintTextColor="@color/primary">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passwordInput"
+                android:id="@+id/password_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="@color/text_primary" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Password Confirmation -->
+        <!-- Поле Подтверждение пароля -->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/passwordConfirmLayout"
+            android:id="@+id/confirm_password_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
             android:hint="Подтвердите пароль"
-            app:boxStrokeColor="@color/primary"
+            app:startIconDrawable="@android:drawable/ic_lock_lock"
             app:endIconMode="password_toggle"
-            app:startIconDrawable="@android:drawable/ic_lock_idle_lock">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passwordConfirmInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Address -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/addressLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="Адрес (необязательно)"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
             app:boxStrokeColor="@color/primary"
-            app:startIconDrawable="@android:drawable/ic_menu_mapmode">
+            app:hintTextColor="@color/primary">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/addressInput"
+                android:id="@+id/confirm_password_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPostalAddress" />
+                android:inputType="textPassword"
+                android:textColor="@color/text_primary" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Progress Bar -->
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:visibility="gone" />
-
-        <!-- Register Button -->
+        <!-- Кнопка Регистрация -->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/registerButton"
+            android:id="@+id/register_button"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:layout_marginTop="24dp"
-            android:backgroundTint="@color/primary"
             android:text="Зарегистрироваться"
             android:textSize="16sp"
-            app:cornerRadius="12dp" />
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:backgroundTint="@color/primary" />
 
-        <!-- Login Link -->
+        <!-- Уже есть аккаунт -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -158,13 +170,15 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/loginText"
+                android:id="@+id/login_link"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Войти"
                 android:textColor="@color/primary"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
 
         </LinearLayout>
 
